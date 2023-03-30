@@ -1,0 +1,138 @@
+.menu {
+  display: flex;
+  align-items: center;
+  max-width: 687px;
+  gap: 30px;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+
+  max-width: 530px;
+  width: 100%;
+}
+
+.menu__link {
+  color: #000;
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  &.active {
+    color: $orange;
+  }
+}
+
+.has-subnav {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-40%);
+    background: url(../icons/header/icon.svg);
+    transition: 0.3s;
+  }
+  &:hover {
+    .subnav {
+      opacity: 1;
+      visibility: visible;
+      user-select: auto;
+      pointer-events: all;
+    }
+    &::after {
+      /* rotate: 180deg; */
+      transform: translateY(-40%) rotateX(180deg);
+    }
+  }
+}
+
+.subnav {
+  width: fit-content;
+  min-width: 70px;
+  background: $orange;
+  border-radius: 0 0 6px 6px;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.subnav__link {
+  padding: 0 8px;
+  display: block;
+  color: #fff;
+  transition: 0.2s;
+
+  &:hover {
+    background: darken($color: #f25822, $amount: 10%);
+  }
+}
+
+.burger {
+  display: none;
+  width: 28px;
+  z-index: 5;
+  span {
+    height: 3px;
+    width: 100%;
+    background: #000;
+    display: block;
+    margin-bottom: 4px;
+    transition: 0.4s;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &.active {
+    span {
+      margin-bottom: 0;
+      &:first-child {
+        transform: rotate(45deg) translateY(4px);
+      }
+      &:nth-child(2) {
+        width: 0;
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-4px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fafafa;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: 0.4s;
+    z-index: 5;
+    &.active {
+      right: 0;
+    }
+  }
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .menu__link {
+    padding: 6px 20px;
+  }
+  .burger {
+    display: block;
+  }
+}

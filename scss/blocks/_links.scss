@@ -1,0 +1,51 @@
+.link {
+  padding: 15px;
+  text-align: center;
+  background: $orange;
+  border-radius: 50px;
+  color: #ffffff;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  min-width: 140px;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+}
+
+////////////
+.link--small {
+  border-radius: 30px;
+  box-shadow: none;
+  min-width: 120px;
+  padding: 10px 15px;
+  font-family: "Gilroy-Semibold";
+  font-size: 12px;
+}
+
+.link--medium {
+  min-width: 150px;
+}
+
+.link--large {
+  min-width: 200px;
+  font-size: 13px;
+}
+
+.link--video {
+  color: #aaaaaa;
+  background: url(../icons/hero/video_icon.svg) left center/contain no-repeat;
+  padding: 5px 0 5px 55px;
+  margin-left: 20px;
+  box-shadow: none;
+}
+
+.active {
+  color: $orange;
+}
+
+@media (max-width: 900px) {
+  .link {
+    font-size: 14px;
+  }
+  .link--small {
+    font-size: 12px;
+  }
+}

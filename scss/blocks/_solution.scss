@@ -1,0 +1,37 @@
+.solution {
+  background: $light-grey url(../images/solution/element.svg) center
+    center/cover no-repeat;
+  padding: 0;
+}
+
+.solution__wrapper {
+  .caption {
+    max-width: 515px;
+    margin-bottom: 35px;
+  }
+  display: flex;
+  align-items: center;
+}
+
+.solution__title {
+  max-width: 409px;
+}
+
+.solution__img {
+  width: 52.6%;
+}
+
+@media (max-width: 900px) {
+  .solution {
+    padding: 50px 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution__wrapper {
+    flex-direction: column;
+  }
+  .solution__img {
+    width: 95%;
+  }
+}

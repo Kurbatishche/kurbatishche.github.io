@@ -1,0 +1,22 @@
+.brands {
+  padding: 95px 0;
+}
+
+.brands__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 14%;
+  }
+}
+
+@media (max-width: 900px) {
+  .brands__wrapper {
+    flex-wrap: wrap;
+    img {
+      width: 30%;
+    }
+  }
+}

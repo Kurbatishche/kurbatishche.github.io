@@ -1,0 +1,92 @@
+.testimonials {
+  text-align: center;
+}
+
+.testimonials__caption {
+  max-width: 459px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+
+.testimonials__slide {
+  padding: 25px 30px;
+  min-height: 271px;
+  // background: green;
+  border: 2px solid #eeeeee;
+  transition: 0.4s;
+  color: #888888;
+  font-size: 16px;
+  cursor: default;
+}
+.testimonials__text {
+  margin-bottom: 30px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 30px;
+    background: url(../icons/testimonials/quote.svg);
+    z-index: -1;
+  }
+}
+.testimonials__image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonials__name {
+  font-family: "Gilroy-SemiBold";
+  font-size: 13px;
+}
+.testimonials__profession {
+  font-size: 13px;
+}
+.testimonials__slider {
+  padding-bottom: 50px;
+  .swiper-slide {
+    opacity: 0.5;
+    transition: 0.4s;
+  }
+  .swiper-slide-prev,
+  .swiper-slide-active {
+    opacity: 1;
+    &:hover {
+      .testimonials__slide {
+        box-shadow: 15px 25px 60px -10px rgba(0, 0, 0, 0.1);
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .testimonials__slider {
+    .swiper-slide-prev {
+      opacity: 0.5;
+      &:hover {
+        .testimonials__slide {
+          box-shadow: none;
+          border: 2px solid #eeeeee;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials__slider {
+    .swiper-slide-active {
+      &:hover {
+        .testimonials__slide {
+          box-shadow: none;
+          border: 2px solid #eeeeee;
+        }
+      }
+    }
+  }
+}

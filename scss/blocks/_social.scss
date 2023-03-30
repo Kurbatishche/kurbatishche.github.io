@@ -1,0 +1,35 @@
+.social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  a {
+    color: #aaaaaa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: $orange;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .social-link {
+    a {
+      &:hover {
+        color: #aaaaaa;
+        background: inherit;
+      }
+    }
+  }
+}

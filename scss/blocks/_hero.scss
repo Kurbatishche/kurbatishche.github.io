@@ -1,0 +1,51 @@
+.hero {
+  overflow: hidden;
+  padding-top: 103px;
+  padding-bottom: 0;
+}
+
+.hero__wrapper {
+  max-width: 522px;
+  position: relative;
+  padding-bottom: 103px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 770px;
+    height: 373px;
+    top: -50px;
+    left: -118px;
+    background: url(../images/hero/elements.svg);
+    z-index: -1;
+  }
+  p {
+    max-width: 466px;
+    margin-bottom: 30px;
+  }
+}
+
+.hero__title {
+  span {
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 112.5%;
+      height: 106%;
+      left: -7%;
+      top: 0px;
+      background: url(../images/hero/stroke.svg) center center/cover no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.hero__img {
+  top: -103px; // center
+  // transform: translateY(-50%);
+  right: -275px;
+  width: 72%;
+  position: absolute;
+  z-index: -1;
+}

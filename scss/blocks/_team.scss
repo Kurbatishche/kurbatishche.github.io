@@ -1,0 +1,64 @@
+.team {
+  text-align: center;
+}
+
+.team__caption {
+  max-width: 461px;
+  margin: 0 auto 50px;
+}
+
+.team__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.team__item {
+  padding: 50px 20px;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid #fff;
+    box-shadow: 15px 20px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.team__item-avatar {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team__item-name {
+  font-family: "Gilroy-SemiBold";
+  font-size: 20px;
+}
+
+.team__item-profesiion {
+  font-family: "Gilroy-Medium";
+  font-size: 13px;
+  color: #888888;
+  margin-bottom: 17px;
+}
+
+@media (max-width: 900px) {
+  .team__items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team__item {
+    &:hover {
+      border: 1px solid #eeeeee;
+
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .team__items {
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+  }
+}

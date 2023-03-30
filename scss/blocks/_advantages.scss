@@ -1,0 +1,121 @@
+.advantages__wrapper {
+  max-width: 570px;
+  margin-left: auto;
+}
+
+.advantages__img {
+  position: absolute;
+  width: 81%;
+  left: -375px;
+  z-index: -1;
+}
+
+.advantages__subtitle {
+  margin-bottom: 20px;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  padding: 17px 49px 17px 30px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.1);
+  }
+  &:last-child {
+    margin-bottom: 130px;
+  }
+}
+
+.advantages__item-img {
+  width: 100px;
+  margin-right: 29px;
+}
+
+.advantages__item-title {
+  margin-bottom: 10px;
+}
+
+.advantages__statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  border: 2px solid #eeeeee;
+  padding: 40px 0;
+  row-gap: 30px;
+}
+
+.advantages__statistics-item {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $orange;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  &:nth-child(4n + 2) {
+    &::after {
+      background: #149211;
+    }
+  }
+  &:nth-child(4n + 3) {
+    &::after {
+      background: #ffc700;
+    }
+  }
+  &:nth-child(4n + 4) {
+    &::after {
+      content: none;
+    }
+  }
+  &:last-child {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.advantages__statistics-item-counter {
+  font-family: "Gilroy-Bold";
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+.advantages__statistics-item-descr {
+  font-family: "Gilroy-SemiBold";
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .advantages__statistics-item-counter {
+    font-size: 60px;
+  }
+  .advantages__statistics-item-descr {
+    font-size: 14px;
+  }
+  .advantages__item {
+    padding: 17px 10px;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .advantages__statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .advantages__statistics-item {
+    &:nth-child(4n + 2) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
