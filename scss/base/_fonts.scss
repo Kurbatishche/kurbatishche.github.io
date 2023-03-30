@@ -1,19 +1,27 @@
 @font-face {
   font-family: "Gilroy-Regular";
-  src: url(../fonts/Gilroy-Regular.woff2);
+  src: url(../fonts/Gilroy-Regular.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Gilroy-Medium";
-  src: url(../fonts/Gilroy-Medium.woff2);
+  src: url(../fonts/Gilroy-Medium.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Gilroy-Semibold";
-  src: url(../fonts/Gilroy-Semibold.woff2);
+  src: url(../fonts/Gilroy-Semibold.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "Gilroy-Bold";
-  src: url(../fonts/Gilroy-Bold.woff2);
+  src: url(../fonts/Gilroy-Bold.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 700;
 }
