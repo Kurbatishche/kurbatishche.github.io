@@ -49,3 +49,9 @@
   position: absolute;
   z-index: -1;
 }
+
+@media (max-width: 900px) {
+  .hero__wrapper {
+    padding: 40px 0;
+  }
+}

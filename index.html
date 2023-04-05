@@ -18,39 +18,39 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link active" href="#">Home</a>
+                <a class="menu__link menu__link--js active" href="#">Home</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">About Us</a>
+                <a class="menu__link menu__link--js" href="#">About Us</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">list</a>
+                <a class="menu__link menu__link--js" href="#">Services</a>
               </li>
               <li class="menu__item has-subnav">
-                <a class="menu__link" href="#">Features</a>
+                <a class="menu__link" href="#!">Features</a>
                 <ul class="subnav">
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link">test</a>
+                    <a href="#" class="subnav__link menu__link--js">test</a>
                   </li>
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link">test</a>
+                    <a href="#" class="subnav__link menu__link--js">test</a>
                   </li>
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link">test</a>
+                    <a href="#" class="subnav__link menu__link--js">test</a>
                   </li>
                 </ul>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Team</a>
+                <a class="menu__link menu__link--js" href="#team">Team</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Blog</a>
+                <a class="menu__link menu__link--js" href="#">Blog</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Contact</a>
+                <a class="menu__link menu__link--js" href="#">Contact</a>
               </li>
             </ul>
-            <a href="#" class="link link--small">Get Started</a>
+            <a href="#" class="link link--small menu__link--js">Get Started</a>
           </nav>
           <div class="overlay"></div>
           <div class="burger">
@@ -77,27 +77,25 @@
               <a href="#" class="link link--video">Watch Video</a>
             </div>
           </div>
-          <img
-            width="843"
-            src="images/hero/hero_img.webp"
-            alt=""
-            class="hero__img"
-          />
+
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="images/hero/hero_img.webp"
+            />
+            <img width="843" src="" alt="" class="hero__img" />
+          </picture>
         </div>
 
         <div class="brands">
           <div class="container">
             <div class="brands__wrapper">
-              <img src="images/brands/liiva.png" alt="" /><img
-                src="images/brands/kanba.png"
-                alt=""
-              /><img src="images/brands/amara.png" alt="" /><img
-                src="images/brands/aven.png"
-                alt=""
-              /><img src="images/brands/hexlab.png" alt="" /><img
-                src="images/brands/kanba.png"
-                alt=""
-              />
+              <img src="images/brands/liiva.png" alt="" />
+              <img src="images/brands/kanba.png" alt="" />
+              <img src="images/brands/amara.png" alt="" />
+              <img src="images/brands/aven.png" alt="" />
+              <img src="images/brands/hexlab.png" alt="" />
+              <img src="images/brands/kanba.png" alt="" />
             </div>
           </div>
         </div>
@@ -394,7 +392,7 @@
           </div>
         </div>
       </section>
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <h2 class="team__title">Our Expert Team Members</h2>
           <p class="team__caption">
@@ -753,33 +751,6 @@
         </p>
       </div>
     </footer>
-    <div class="grid-box">
-      <div class="grid-item grid-item--1">1</div>
-      <div class="grid-item grid-item--2">2</div>
-      <div class="grid-item grid-item--3">3</div>
-      <div class="grid-item grid-item--4">4</div>
-      <div class="grid-item grid-item--5">5</div>
-      <div class="grid-item grid-item--6">6</div>
-    </div>
-    <!-- lesson -->
-
-    <!-- <section class="inputs">
-      <div class="container">
-        <form class="speed__form" action="#">
-          <input type="text" placeholder="Enter Name" />
-          <input type="password" name="" />
-          <input type="date" name="" />
-          <input type="checkbox" name="" />
-          <input type="color" name="" id="" />
-          <input type="file" name="" id="" />
-          <input type="number" name="" id="" />
-          <input type="radio" name="" id="" />
-          <input type="range" min="1" max="100" name="" id="" />
-        </form>
-      </div>
-    </section> -->
-    <!-- <script src="js/swiper-bundle.min.js"></script> -->
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>

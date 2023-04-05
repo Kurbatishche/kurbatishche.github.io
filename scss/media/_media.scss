@@ -11,10 +11,13 @@
   h3 {
     font-size: 17px;
   }
+  section {
+    padding: 40px 0;
+  }
 }
 
 @media (max-width: 550px) {
   h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
 }

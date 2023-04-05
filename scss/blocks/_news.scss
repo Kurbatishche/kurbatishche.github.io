@@ -154,11 +154,20 @@
 }
 
 @media (max-width: 600px) {
+  .news {
+    padding: 40px 15px;
+  }
   .news__item-content {
     width: 100%;
     padding: 20px 10px;
   }
   .news__item-img {
     display: none;
+  }
+  .news__item-title {
+    max-width: none;
+  }
+  .news__item-content-text {
+    max-width: none;
   }
 }

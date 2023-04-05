@@ -59,12 +59,8 @@
 .footer__inner {
   &:last-child {
     .footer__list {
-      padding: 0;
-      li {
-        &::marker {
-          color: transparent;
-        }
-      }
+      list-style: none;
+      padding-left: 0;
     }
   }
 }

@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
+const menuLinks = document.querySelectorAll(".menu__link--js");
 
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
@@ -8,11 +9,21 @@ burger.addEventListener("click", function () {
   overlay.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
 });
+
 overlay.addEventListener("click", function () {
   menu.classList.toggle("active");
   burger.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  });
 });
 
 const testimonialsSlider = new Swiper(".testimonials__slider", {
@@ -61,7 +72,7 @@ const testimonialsSlider = new Swiper(".testimonials__slider", {
     800: {
       slidesPerView: 1.6,
     },
-    500: {
+    600: {
       slidesPerView: 1.3,
     },
     320: {
