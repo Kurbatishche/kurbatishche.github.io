@@ -53,5 +53,8 @@
 @media (max-width: 900px) {
   .hero__wrapper {
     padding: 40px 0;
+    &::before {
+      background: none;
+    }
   }
 }

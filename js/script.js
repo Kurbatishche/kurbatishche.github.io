@@ -2,6 +2,8 @@ const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
 const menuLinks = document.querySelectorAll(".menu__link--js");
+const hasSubnav = document.querySelector(".has-subnav");
+const subnav = document.querySelector(".subnav");
 
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
@@ -25,6 +27,17 @@ menuLinks.forEach((link) => {
     document.body.classList.remove("no-scroll");
   });
 });
+
+if (document.documentElement.clientWidth <= 768) {
+  hasSubnav.addEventListener("click", function () {
+    hasSubnav.classList.toggle("active");
+    if (subnav.style.height) {
+      subnav.style.height = null;
+    } else {
+      subnav.style.height = subnav.scrollHeight + "px";
+    }
+  });
+}
 
 const testimonialsSlider = new Swiper(".testimonials__slider", {
   speed: 400,

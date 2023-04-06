@@ -108,6 +108,13 @@
 }
 
 @media (max-width: 550px) {
+  .advantages__item {
+    padding: 12px 0;
+  }
+  .advantages__item-img {
+    width: 80px;
+    margin-right: 10px;
+  }
   .advantages__statistics {
     grid-template-columns: repeat(2, 1fr);
   }

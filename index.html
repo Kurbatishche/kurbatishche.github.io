@@ -21,22 +21,26 @@
                 <a class="menu__link menu__link--js active" href="#">Home</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link menu__link--js" href="#">About Us</a>
+                <a class="menu__link menu__link--js" href="#about">About Us</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link menu__link--js" href="#">Services</a>
+                <a class="menu__link menu__link--js" href="#speed">Services</a>
               </li>
               <li class="menu__item has-subnav">
                 <a class="menu__link" href="#!">Features</a>
                 <ul class="subnav">
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link menu__link--js">test</a>
+                    <a href="#" class="subnav__link menu__link--js"
+                      >Solutions</a
+                    >
                   </li>
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link menu__link--js">test</a>
+                    <a href="#" class="subnav__link menu__link--js"
+                      >Testmonials</a
+                    >
                   </li>
                   <li class="subnav__item">
-                    <a href="#" class="subnav__link menu__link--js">test</a>
+                    <a href="#" class="subnav__link menu__link--js">Plans</a>
                   </li>
                 </ul>
               </li>
@@ -44,10 +48,10 @@
                 <a class="menu__link menu__link--js" href="#team">Team</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link menu__link--js" href="#">Blog</a>
+                <a class="menu__link menu__link--js" href="#blog">Blog</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link menu__link--js" href="#">Contact</a>
+                <a class="menu__link menu__link--js" href="#footer">Contact</a>
               </li>
             </ul>
             <a href="#" class="link link--small menu__link--js">Get Started</a>
@@ -167,6 +171,7 @@
             </div>
           </div>
         </div>
+        <span id="about"></span>
       </div>
       <section class="choose">
         <div class="container">
@@ -229,11 +234,14 @@
       </section>
       <section class="advantages">
         <div class="container">
-          <img
-            class="advantages__img"
-            src="images/advantages/advantages_img.png"
-            alts=""
-          />
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="images/advantages/advantages_img.png"
+            />
+            <img class="advantages__img" src="" alts="" />
+          </picture>
+
           <div class="advantages__wrapper">
             <h2 class="advantages__title">
               You may ask what SEO & why do you need it?
@@ -316,6 +324,7 @@
             </div>
           </div>
         </div>
+        <span id="speed"></span>
       </section>
       <section class="speed">
         <div class="container">
@@ -325,7 +334,13 @@
               Distinctively exploit optimal alignments for intuitive bandwidth.
               Quickly coordinate e-business through revolutionary.
             </p>
-            <img src="images/speed/spped_img.png" alt="" class="speed__img" />
+            <picture>
+              <source
+                media="(min-width: 600px)"
+                srcset="images/speed/spped_img.png"
+              />
+              <img src="" alt="" class="speed__img" />
+            </picture>
             <form class="speed__form" action="#">
               <input
                 type="url"
@@ -391,8 +406,9 @@
             </div>
           </div>
         </div>
+        <span id="team"></span>
       </section>
-      <section class="team" id="team">
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Our Expert Team Members</h2>
           <p class="team__caption">
@@ -494,6 +510,7 @@
             </div>
           </div>
         </div>
+        <span id="testimonials"></span>
       </section>
       <section class="testimonials">
         <div class="container">
@@ -578,6 +595,7 @@
           <!-- <div class="swiper-button-prev"></div> -->
           <!-- <div class="swiper-button-next"></div> -->
         </div>
+        <span id="blog"></span>
       </section>
       <section class="news">
         <div class="container">
@@ -670,7 +688,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer__inner">
